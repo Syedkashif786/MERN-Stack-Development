@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal CSS</title>
+
+<style>
+    /* name selector */
+    h1{
+        color: blue;
+        text-decoration: underline double red;
+        font-weight: 100;
+        font-size: 35px;
+    }
+    /* class selector */
+    .myclass{
+        font-size: 30px;
+        font-style: italic;
+    }
+    .myclass2{
+        font-style: normal;
+    }
+    /* id selector */
+    #myid{
+        font-size: 40px;
+        word-spacing: 4px;
+        text-align: center;
+        letter-spacing: 4px;
+        transition-duration: 300ms;
+        color: blueviolet;
+    }
+    /* pseudo class selector */
+    #myid:hover{
+        color:red;
+        letter-spacing: 8px;
+    }
+</style>
+</head>
+<body>
+    <h1>Internal CSS is used to apply on multiple tags at once.</h1>
+    <h1>Internal CSS is applied using style tag inside head tag.</h1>
+    <h1 class="myclass myclass2">Name Selector is used to select tag by their name</h1>
+
+    <p class="myclass">Class Selector is used to select tag by their class names</p>
+
+    <p id="myid" class="myclass" style="font-size:30px">Id selectors are used to uniquely select tags by their id name</p>
+    
+</body>
+</html>

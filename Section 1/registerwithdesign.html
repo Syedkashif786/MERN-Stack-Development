@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0%;
+            /* background: url(logo.png); */
+            /* background: linear-gradient(to right, rgb(184, 184, 118) ,rgb(220, 152, 26)); */
+            background: linear-gradient(to right, rgba(202, 202, 140, 0.43), rgba(220, 110, 26, 0.438)), url(logo.png);
+
+            background-size: cover;
+            backdrop-filter: blur(5px);
+
+        }
+
+        .mycard h3,
+        label {
+            color: rgb(126, 73, 0);
+            /* x-offset y-offset blur color; */
+            text-shadow: 2px 2px 4px white;
+        }
+
+
+        .mycard {
+            /* background: yellow; */
+            /* shorthand properties  */
+            border: 2px solid rgb(255, 149, 0);
+            width: 30%;
+            /* margin: 300px auto; */
+            /* syntax: x-offset y-offset blur size color;  */
+            padding: 40px;
+            box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.308), -3px -3px 2px 2px rgba(0, 0, 0, 0.308);
+            box-sizing: border-box;
+            border-radius: 10px;
+            background: #f2daa1;
+        }
+
+        .myinput,
+        .mybtn {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        .myinput:focus {
+            background: rgb(0, 0, 0);
+            color: white;
+        }
+
+        .mybtn {
+            background: rgb(247, 213, 125);
+            color: rgb(137, 38, 2);
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .form-title{
+            font-family: Montserrat;
+            text-align: center;
+            font-size: 1.5rem !important;
+        }
+        *{
+            font-family: Montserrat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mycard">
+
+        <H3 class="form-title">Register Here to Continue</H3>
+        <hr />
+
+        <label>E-mail</label>
+        <input class="myinput" placeholder="Enter Email Address">
+        <br />
+        <br />
+
+        <label>Course</label>
+        <select class="myinput">
+            <option>B.tech</option>
+            <option>BCA</option>
+            <option>MCA</option>
+        </select>
+        <br />
+        <br />
+
+        <label>Department</label>
+        <input class="myinput" list="dept">
+
+        <datalist id="dept">
+            <option>Computer Science</option>
+            <option>Arts</option>
+            <option>Commerce</option>
+            <option>Mechanical</option>
+        </datalist>
+        <br />
+        <br />
+
+        <label>Password</label>
+        <input class="myinput" type="password" placeholder="Enter Secure Password">
+        <br />
+        <br />
+        <Button class="mybtn">Submit</Button>
+
+        <!-- http://192.168.2.172:5500/moretags.html -->
+
+
+
+    </div>
+</body>
+
+</html>
