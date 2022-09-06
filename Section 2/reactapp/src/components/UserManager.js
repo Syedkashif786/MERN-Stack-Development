@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
+import UpdateUser from './UpdateUser';
 
 const UserManager = () => {
 
@@ -92,6 +93,10 @@ const UserManager = () => {
                 {
                     showForm ?
                     <div className = "col-md">
+                        <UpdateUser userFormData={userFormData} 
+                        getDataFromBackend ={getDataFromBackend}
+                        setshowForm = {setshowForm}
+                        />
 
                     </div>
                     :

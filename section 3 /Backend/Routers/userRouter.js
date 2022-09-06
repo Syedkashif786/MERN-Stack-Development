@@ -1,5 +1,6 @@
 // to process user requests only 
 const express = require('express');
+const { update } = require('../models/userModel');
 const router = express.Router();
 const Model = require('../models/userModel');
 
@@ -57,6 +58,17 @@ router.delete('/delete/:id', (req,res) => {
         res.json(result);
     }).catch((err) => {
         res.json(err);
+    });
+})
+
+// we use put for update 
+// id tell which user we have to update and body tell what to update in that respective user. 
+router.put('/update/:id', (req,res) => {
+    Model.findByIdAndUpdate(req.params.id, req.body)
+    .then((result) => {
+        res.json(result);
+    }).catch((err) => {
+        res.status(500).json(err);
     });
 })
 
